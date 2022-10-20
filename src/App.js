@@ -4,7 +4,7 @@ import SearchIcon from './search.svg'
 import MovieCard from "./MovieCard";
 
 
-const API_URL = 'http://www.omdbapi.com?apikey=6d6754d7';
+const API_URL = 'https://www.omdbapi.com?apikey=6d6754d7';
 
 const movie1 = {
 "Title": "Superman, Spiderman or Batman",
@@ -26,17 +26,42 @@ const App = () => {
 
 
     useEffect(() => {
-        searchMovies('Spiderman')
+        searchMovies('Harry Potter')
     }, [])
     return (
         <div className="app">
-            <h1>MovieLand</h1>
+            <h1>Movie Vendetta</h1>
 
+            {/* coin animation */}
+            <div className="coin">
+            <div class="coin__front"></div>
+                    <div class="coin__edge">
+                        <div class="coin__edge_image"></div><div class="coin__edge_image"></div><div class="coin__edge_image"></div><div class="coin__edge_image"></div><div class="coin__edge_image"></div><div class="coin__edge_image"></div><div></div><div></div><div></div><div></div>
+                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    </div>
+                    <div class="coin__back"></div>
+                    <div class="coin__shadow"></div>
+            </div>
+            
+            
+            {/* end of coin animation */}
+            
             <div className="search">
                 <input 
                 placeholder="search for movies"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
+                onKeyPress={(e) => {
+                    if (e.key === 'Enter'){
+                        searchMovies(searchTerm)
+                    }
+                }}
                 />
                 <img 
                 src={SearchIcon}
