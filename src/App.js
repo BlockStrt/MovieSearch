@@ -80,7 +80,7 @@ const App = () => {
              ) :
              (
                  <div className="empty">
-                     <h2>No Movies Found</h2>
+                     <h2>Found 0 Movies</h2>
                  </div>
              )
 
