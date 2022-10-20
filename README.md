@@ -2,7 +2,7 @@
 
 React Project fetching a movie database from OMDB API
 
-[Movie Search Feature Here](https://app.netlify.com/sites/bucolic-longma-4d65a0/overview)
+[Movie Search Feature Here](https://bucolic-longma-4d65a0.netlify.app/)
 
 
 ## Prerequisites
